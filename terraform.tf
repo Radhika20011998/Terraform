@@ -33,6 +33,7 @@ resource "aws_instance" "app_server" {
   count         = 3    
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
+  key_name      = "Day_15"
 
   tags = {
     Name = "Terraform_Ubuntu_Demo"
