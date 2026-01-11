@@ -79,6 +79,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "app_server" {
   count         = 3
+  key_name      = "Day_15"
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro" # Free Tier eligible
 
